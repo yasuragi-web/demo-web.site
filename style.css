@@ -1,0 +1,583 @@
+/* 全体の基本設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    color: #17263a;
+    background-color: #ffffff;
+}
+
+/* 画像の基本設定 */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* リンクの基本設定 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ヘッダー */
+.header {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+/* ヘッダー内部 */
+.header-inner {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 10px 50px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ロゴ */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #17263a;
+    text-decoration: none;
+}
+
+/* ナビゲーション */
+.nav ul {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* メニュー文字 */
+.nav a {
+    text-decoration: none;
+    color: #17263a;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+/* メニューのホバー */
+.nav a:not(.contact-btn) {
+    position: relative;
+}
+
+.nav a:not(.contact-btn)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background-color: #B49A68;
+    transition: width 0.3s;
+}
+
+.nav a:not(.contact-btn):hover {
+    color: #B49A68;
+}
+
+.nav a:not(.contact-btn):hover::after {
+    width: 100%;
+}
+
+/* お問い合わせボタン */
+.nav .contact-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #17263a;
+    color: #ffffff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+/* お問い合わせボタンのホバー */
+.nav .contact-btn:hover {
+    background-color: #B49A68;
+    color: #ffffff;
+}
+
+.logo .sub-logo {
+    width: 180px;
+    height: auto;
+}
+
+/* 1つ目のロゴ */
+.logo-mark {
+    width: 85px;
+    height: auto;
+}
+
+/* 2つ目のロゴ */
+.logo-name {
+    width: 160px;
+    height: auto;
+}
+
+/* メインビジュアル */
+/* メインビジュアル */
+.mv {
+    width: 100%;
+    min-height: 650px;
+    background-color: #0D2037;
+    color: #ffffff;
+
+    display: grid;
+    grid-template-columns: 45% 55%;
+    align-items: stretch;
+}
+
+/* 左側：文字 */
+.mv-content {
+    padding: 60px clamp(30px, 5vw, 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.mv-subtitle {
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.mv-content h1 {
+    font-size: clamp(30px, 3.2vw, 48px);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.mv-text {
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* 右側：写真 */
+.mv-image {
+    width: 100%;
+    min-height: 650px;
+    overflow: hidden;
+}
+
+.mv-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* ナビゲーション */
+.nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* メニュー文字 */
+.nav a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+
+
+/* スマートフォン対応 */
+@media screen and (max-width: 768px) {
+
+    .mv {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .mv-content {
+        padding: 60px 25px;
+    }
+
+    .mv-content h1 {
+        font-size: clamp(28px, 6vw, 36px);
+    }
+
+    .mv-text {
+        font-size: 14px;
+    }
+
+    .mv-image {
+        min-height: 0;
+        height: 300px;
+    }
+
+}
+
+/* 小さい画面でのヘッダー調整 */
+@media screen and (max-width: 768px) {
+
+    .header-inner {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .logo-mark {
+        width: 65px;
+    }
+
+    .logo-name {
+        width: 140px;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nav a {
+        font-size: 12px;
+    }
+
+}
+
+/* おすすめ車両セクション */
+.recommend {
+    width: 100%;
+    padding: 70px 30px 40px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+.section-inner {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* セクション見出し */
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.section-heading>a {
+    font-size: 13px;
+    color: #333333;
+    text-decoration: none;
+}
+
+/* おすすめ車両3台 */
+.recommend-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: stretch;
+}
+
+.car-card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.car-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    display: block;
+}
+
+.car-card h3 {
+    font-size: 17px;
+    margin: 15px 0 8px;
+}
+
+.car-card p {
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 6px 0;
+}
+
+.car-price {
+    margin-top: 18px !important;
+    padding-left: 10px;
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.car-price strong {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* 詳細ボタン */
+
+
+.car-detail {
+    display: block;
+    text-align: center;
+    padding: 14px 10px;
+    margin-top: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 2px solid #17263a;
+    border-radius: 5px;
+    color: #17263a;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* 展示車一覧ボタン */
+.all-cars-btn {
+    display: block;
+    width: fit-content;
+    margin: 35px auto 0;
+    padding: 18px 30px;
+    background-color: #17263a;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+/* 車種から探すセクション */
+.category {
+    width: 100%;
+    padding: 40px 30px 70px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+/* 見出し */
+.category h2 {
+    font-size: 24px;
+    margin: 0 0 30px;
+}
+
+/* 車種一覧 */
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* 車種カード */
+.category-item {
+    display: block;
+    color: #333333;
+    text-decoration: none;
+    min-width: 0;
+}
+
+/* 車の写真 */
+.category-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 12px;
+}
+
+/* 車種名 */
+.category-item p {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 5px;
+}
+
+/* 車種の説明 */
+.category-item span {
+    display: block;
+    font-size: 12px;
+}
+
+/* おすすめ車両・車種一覧のスマホ対応 */
+@media screen and (max-width: 768px) {
+
+    .recommend {
+        padding: 45px 20px 30px;
+    }
+
+    .category {
+        padding: 35px 20px 50px;
+    }
+
+    /* 見出し */
+    .section-heading {
+        align-items: flex-start;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .section-heading h2,
+    .category h2 {
+        font-size: 20px;
+    }
+
+    /* おすすめ車両 */
+    .recommend-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 15px;
+    }
+
+    .car-card img {
+        height: 130px;
+    }
+
+    .car-card h3 {
+        font-size: 14px;
+    }
+
+    .car-card p {
+        font-size: 11px;
+    }
+
+    .car-price strong {
+        font-size: 22px;
+    }
+
+    .car-detail {
+        font-size: 12px;
+        padding: 12px 5px;
+    }
+
+    /* 車種から探す */
+    .category-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 15px;
+    }
+
+    .category-item img {
+        height: 130px;
+    }
+}
+
+
+/* 車の写真と背景画像 */
+.car-image {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 車の画像 */
+.car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* それぞれの背景画像 */
+.car-bg-blue {
+    background-image: url("image/blue.png");
+}
+
+.car-bg-green {
+    background-image: url("image/green.png");
+}
+
+.car-bg-orange {
+    background-image: url("image/orange.png");
+}
+
+/* 車種一覧の背景画像 */
+.car-bg-blue2 {
+    background-image: url("image/blue2.png");
+}
+
+.car-bg-green2 {
+    background-image: url("image/green2.png");
+}
+
+.car-bg-orange2 {
+    background-image: url("image/orange2.png");
+}
+
+.car-bg-red {
+    background-image: url("image/red.png");
+}
+
+/* 車ごとの画像サイズ調整 */
+.car-size-large {
+    transform: scale(1.27);
+}
+
+/* 車種一覧：車ごとの画像サイズ調整 */
+.category-size-sierra {
+    transform: scale(1.20);
+}
+
+.category-size-nomad {
+    transform: translateY(8px) scale(1.0);
+}
+
+.category-size-hustler {
+    transform: translateY(11px) scale(1.0);
+}
+
+/* おすすめ車両の背景だけ大きくする */
+.recommend .car-image {
+    background-size: 45% auto;
+    background-position: 80% center;
+}
+
+/* おすすめ車両の文字位置 */
+.car-card h3,
+.car-card p {
+    padding-left: 30px;
+}
+
+/* 車種から探す：背景画像の位置 */
+.category .car-image {
+    background-position: 75% center;
+}
+
+/* 展示車一覧ボタンのホバー */
+.all-cars-btn {
+    transition: background-color 0.3s;
+}
+
+.all-cars-btn:hover {
+    background-color: #B49A68;
+    color: #ffffff;
+}
