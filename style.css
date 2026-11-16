@@ -509,32 +509,32 @@ a {
 
 /* それぞれの背景画像 */
 .car-bg-blue {
-    background-image: url("blue.png");
+    background-image: url("image/blue.png");
 }
 
 .car-bg-green {
-    background-image: url("green.png");
+    background-image: url("image/green.png");
 }
 
 .car-bg-orange {
-    background-image: url("orange.png");
+    background-image: url("image/orange.png");
 }
 
 /* 車種一覧の背景画像 */
 .car-bg-blue2 {
-    background-image: url("blue2.png");
+    background-image: url("image/blue2.png");
 }
 
 .car-bg-green2 {
-    background-image: url("green2.png");
+    background-image: url("image/green2.png");
 }
 
 .car-bg-orange2 {
-    background-image: url("orange2.png");
+    background-image: url("image/orange2.png");
 }
 
 .car-bg-red {
-    background-image: url("red.png");
+    background-image: url("image/red.png");
 }
 
 /* 車ごとの画像サイズ調整 */
@@ -580,4 +580,565 @@ a {
 .all-cars-btn:hover {
     background-color: #B49A68;
     color: #ffffff;
+}
+
+/* サポートエリア */
+.support {
+    width: 100%;
+    padding: 35px 30px;
+    box-sizing: border-box;
+    background-color: #0D2037;
+    color: #ffffff;
+}
+
+.support-inner {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* サポート見出し */
+.support-heading {
+    margin-bottom: 20px;
+}
+
+.support-heading p {
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin: 0 0 5px;
+}
+
+.support-heading h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+/* 3つの相談メニュー */
+.support-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.support-item {
+    display: block;
+    padding: 15px;
+    background-color: #18344F;
+    border: 1px solid #496078;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.support-item>span:first-child {
+    font-size: 10px;
+    color: #AABAC9;
+}
+
+.support-item h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+.support-item p {
+    font-size: 14px;
+    margin: 0 0 12px;
+}
+
+.support-arrow {
+    display: block;
+    width: 32px;
+    padding: 3px 0;
+    border-radius: 20px;
+    background-color: #ffffff;
+    color: #17263a;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* サポートカードのホバー */
+.support-item:hover {
+    background-color: #294762;
+    border-color: #B49A68;
+    transform: translateY(-3px);
+}
+
+.support-arrow {
+    transition: 0.3s;
+}
+
+.support-item:hover .support-arrow {
+    background-color: #B49A68;
+    color: #ffffff;
+}
+
+/* 車検・スタッフ紹介 */
+.support-info {
+    width: 100%;
+    padding: 60px 30px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+.support-info-inner {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* 各紹介カード */
+.info-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+/* 写真 */
+.info-image {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.info-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+/* 説明文 */
+
+.info-content h4 {
+    font-size: 20px;
+    margin: 0 0 15px;
+}
+
+.info-content p {
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.info-content a {
+    display: inline-block;
+    padding: 12px 25px;
+    border: 1px solid #17263a;
+    color: #17263a;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.info-content a:hover {
+    background-color: #17263a;
+    color: #ffffff;
+}
+
+/* 車検・スタッフ紹介のスマホ対応 */
+@media screen and (max-width: 768px) {
+
+    .support-info {
+        padding: 40px 20px;
+    }
+
+    .info-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 45px;
+    }
+
+    .info-image {
+        height: 230px;
+    }
+
+    .info-content h3 {
+        font-size: 20px;
+    }
+
+    .info-content h4 {
+        font-size: 15px;
+    }
+
+    .info-content p {
+        font-size: 13px;
+    }
+
+}
+
+.info-content {
+    background-color: #f2f3f5;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* 見出し */
+.info-content h3 {
+    font-size: 24px;
+    color: #ffffff;
+    background-color: #0D2037;
+
+    margin: -30px -28px 15px;
+    padding: 15px 58px;
+}
+
+/* 車検ロゴ */
+.shaken-logo {
+    display: block;
+    width: 100px;
+    height: auto;
+    margin: 10px 0 0 auto;
+}
+
+/* 車検リンクとロゴ */
+.shaken-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* 車検ロゴ */
+.shaken-logo {
+    width: 120px;
+    height: auto;
+    margin: 0;
+}
+
+/* INFORMATION お店からのお知らせ */
+.information {
+    background-color: #EEF2F6;
+    padding: 40px 30px;
+    border-top: 1px solid #bfc5cc;
+    border-bottom: 1px solid #bfc5cc;
+}
+
+.information-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* 左側の見出し */
+.information-heading span {
+    font-family: serif;
+    font-size: 16px;
+    color: #17263A;
+}
+
+.information-heading h2 {
+    font-size: 24px;
+    color: #17263A;
+    margin: 8px 0;
+}
+
+.information-heading p {
+    font-family: serif;
+    font-size: 15px;
+    color: #17263A;
+    margin: 0;
+}
+
+/* お知らせ一覧 */
+.information-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.information-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 10px;
+    border-bottom: 1px solid #aab5c1;
+    color: #17263A;
+    text-decoration: none;
+}
+
+.information-item time {
+    font-size: 13px;
+}
+
+.information-item h3 {
+    font-size: 17px;
+    margin: 5px 0 0;
+}
+
+.information-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #aab5c1;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.information-more {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 10px;
+    color: #17263A;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* お知らせのジムニーイラスト */
+.information-visual {
+    width: 150px;
+    height: 100px;
+    margin: 20px auto 0;
+    background-image: url("image/illustration-back.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: calc(50% + 20px) center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.information-visual img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* 店舗情報・お問い合わせ */
+.contact-section {
+    width: 100%;
+}
+
+/* 店舗情報エリア */
+.access-info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 75px 4% 130px 12%;
+    background-color: #ffffff;
+}
+
+/* 外観写真 */
+.access-image {
+    width: 45%;
+}
+
+.access-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    display: block;
+}
+
+/* 店舗情報 */
+.access-details {
+    width: 55%;
+}
+
+.access-details h2 {
+    font-size: 26px;
+    color: #0D2037;
+    margin-bottom: 25px;
+}
+
+.access-details p {
+    font-size: 15px;
+    color: #333333;
+    padding: 12px 0;
+    border-bottom: 1px solid #dddddd;
+}
+
+/* アクセスボタン */
+.access-button {
+    position: absolute;
+    left: 50%;
+    bottom: 45px;
+    transform: translateX(-50%);
+    display: inline-block;
+    padding: 16px 75px;
+    background-color: #0D2037;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.access-button:hover {
+    opacity: 0.8;
+}
+
+/* お問い合わせエリア */
+.contact-banner {
+    background-color: #0D2037;
+    color: #ffffff;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.contact-banner h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.contact-banner>p {
+    font-size: 15px;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+/* 来店予約・お問い合わせボタン */
+.contact-button {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #0D2037;
+    text-decoration: none;
+    padding: 16px 75px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 35px;
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+    opacity: 0.8;
+}
+
+/* 電話番号 */
+.contact-tel-label {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.contact-tel {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.contact-tel:hover {
+    opacity: 0.8;
+}
+
+/* ジムニーが走って戻る
+.information-visual img {
+    animation: jimny-drive 4s ease-in-out infinite;
+}
+
+@keyframes jimny-drive {
+    0% {
+        transform: translateX(0);
+    }
+
+    40% {
+        transform: translateX(-80px);
+    }
+
+    60% {
+        transform: translateX(-80px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}*/
+
+
+/* ジムニーの走行アニメーション */
+.information-visual {
+    overflow: hidden;
+}
+
+.information-visual img {
+    animation: jimnyDrive 3s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+
+/* 走行・ジャンプ・着地 */
+@keyframes jimnyDrive {
+
+    /* 左から登場 */
+    0% {
+        transform: translateX(-120%) translateY(0) rotate(0deg) scaleY(1);
+        opacity: 0;
+    }
+
+    /* 走ってくる */
+    35% {
+        transform: translateX(0) translateY(0) rotate(0deg) scaleY(1);
+        opacity: 1;
+    }
+
+    /* ジャンプ */
+    45% {
+        transform: translateX(0) translateY(-15px) rotate(-2deg) scaleY(1);
+    }
+
+    /* 着地して沈み込む */
+    52% {
+        transform: translateX(0) translateY(3px) rotate(1deg) scaleY(0.96);
+    }
+
+    /* 反動で跳ね返る */
+    60% {
+        transform: translateX(0) translateY(-6px) rotate(-1deg) scaleY(1.02);
+    }
+
+    /* 落ち着く */
+    70% {
+        transform: translateX(0) translateY(0) rotate(0deg) scaleY(1);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0) rotate(0deg) scaleY(1);
+        opacity: 1;
+    }
+}
+
+@keyframes jimnyDrive {
+
+    0% {
+        transform: translateX(120%) translateY(0) rotate(0deg) scaleY(1);
+        opacity: 0;
+    }
+
+    35% {
+        transform: translateX(0) translateY(0) rotate(0deg) scaleY(1);
+        opacity: 1;
+    }
+
+    45% {
+        transform: translateX(0) translateY(-15px) rotate(-2deg) scaleY(1);
+    }
+
+    52% {
+        transform: translateX(0) translateY(3px) rotate(1deg) scaleY(0.96);
+    }
+
+    60% {
+        transform: translateX(0) translateY(-6px) rotate(-1deg) scaleY(1.02);
+    }
+
+    70% {
+        transform: translateX(0) translateY(0) rotate(0deg) scaleY(1);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0) rotate(0deg) scaleY(1);
+        opacity: 1;
+    }
 }
