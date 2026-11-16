@@ -1170,6 +1170,7 @@ a {
     }
 }
 
+
 /* おすすめ車両：画像の動き */
 .car-card .car-image {
     overflow: hidden;
@@ -1185,29 +1186,28 @@ a {
     animation: car-card-wiggle 0.8s ease-in-out infinite;
 }
 
-/* 左右に揺れながら浮く */
-@keyframes car-card-wiggle {
+/* 少し縮小しながら左右に揺れる */
+@keyframes sierra-wiggle {
     0% {
-        transform: translateY(-5px) rotate(0deg) scale(1.03);
+        transform: translateY(0) rotate(0deg) scale(0.95);
     }
 
     25% {
-        transform: translateY(-9px) rotate(-2deg) scale(1.05);
+        transform: translateY(-3px) rotate(-2deg) scale(0.95);
     }
 
     50% {
-        transform: translateY(-5px) rotate(0deg) scale(1.03);
+        transform: translateY(0) rotate(0deg) scale(0.95);
     }
 
     75% {
-        transform: translateY(-9px) rotate(2deg) scale(1.05);
+        transform: translateY(-3px) rotate(2deg) scale(0.95);
     }
 
     100% {
-        transform: translateY(-5px) rotate(0deg) scale(1.03);
+        transform: translateY(0) rotate(0deg) scale(0.95);
     }
 }
-
 
 /* おすすめ車両カード全体の動き */
 .car-card {
@@ -1218,4 +1218,15 @@ a {
 .car-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* 2台目のジムニーシエラを少し大きく */
+.car-card .car-size-large {
+    width: 110%;
+    max-width: none;
+}
+
+/* 2台目だけ縮小率を95%にする */
+.car-card .car-size-large {
+    animation-name: sierra-wiggle;
 }
