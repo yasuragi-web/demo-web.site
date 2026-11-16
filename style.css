@@ -509,32 +509,32 @@ a {
 
 /* それぞれの背景画像 */
 .car-bg-blue {
-    background-image: url("image/blue.png");
+    background-image: url("blue.png");
 }
 
 .car-bg-green {
-    background-image: url("image/green.png");
+    background-image: url("green.png");
 }
 
 .car-bg-orange {
-    background-image: url("image/orange.png");
+    background-image: url("orange.png");
 }
 
 /* 車種一覧の背景画像 */
 .car-bg-blue2 {
-    background-image: url("image/blue2.png");
+    background-image: url("blue2.png");
 }
 
 .car-bg-green2 {
-    background-image: url("image/green2.png");
+    background-image: url("green2.png");
 }
 
 .car-bg-orange2 {
-    background-image: url("image/orange2.png");
+    background-image: url("orange2.png");
 }
 
 .car-bg-red {
-    background-image: url("image/red.png");
+    background-image: url("red.png");
 }
 
 /* 車ごとの画像サイズ調整 */
