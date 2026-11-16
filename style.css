@@ -1135,6 +1135,87 @@ a {
     font-weight: bold;
 }
 
-.car-card p:last-of-type {
-    margin-bottom: 0;
+
+/* 車種カード：マウスを乗せたときの動き */
+.category-item .car-image img {
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+}
+
+/* マウスを乗せたとき */
+.category-item:hover .car-image img {
+    animation: car-wiggle 0.8s ease-in-out infinite;
+}
+
+/* 左右に揺れながら少し浮く */
+@keyframes car-wiggle {
+    0% {
+        transform: translateY(-5px) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-9px) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-5px) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(-9px) rotate(2deg);
+    }
+
+    100% {
+        transform: translateY(-5px) rotate(0deg);
+    }
+}
+
+/* おすすめ車両：画像の動き */
+.car-card .car-image {
+    overflow: hidden;
+}
+
+.car-card .car-image img {
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+}
+
+/* マウスを乗せたとき */
+.car-card:hover .car-image img {
+    animation: car-card-wiggle 0.8s ease-in-out infinite;
+}
+
+/* 左右に揺れながら浮く */
+@keyframes car-card-wiggle {
+    0% {
+        transform: translateY(-5px) rotate(0deg) scale(1.03);
+    }
+
+    25% {
+        transform: translateY(-9px) rotate(-2deg) scale(1.05);
+    }
+
+    50% {
+        transform: translateY(-5px) rotate(0deg) scale(1.03);
+    }
+
+    75% {
+        transform: translateY(-9px) rotate(2deg) scale(1.05);
+    }
+
+    100% {
+        transform: translateY(-5px) rotate(0deg) scale(1.03);
+    }
+}
+
+
+/* おすすめ車両カード全体の動き */
+.car-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* カードにマウスを乗せたとき */
+.car-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
