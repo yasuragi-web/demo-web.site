@@ -1232,3 +1232,10 @@ a {
     display: inline-block;
     margin-top: 60px;
 }
+
+/* セクション見出しの下線 */
+.recommend .section-heading h2,
+.category h2 {
+    padding-bottom: 15px;
+    border-bottom: 2px solid #0D2037;
+}
