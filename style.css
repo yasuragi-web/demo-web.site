@@ -964,6 +964,7 @@ a {
     text-decoration: none;
     font-size: 16px;
     transition: 0.3s;
+    border-radius: 6px;
 }
 
 .access-button:hover {
@@ -1001,6 +1002,7 @@ a {
     font-weight: bold;
     margin-bottom: 35px;
     transition: 0.3s;
+    border-radius: 6px;
 }
 
 .contact-button:hover {
@@ -1238,4 +1240,264 @@ a {
 .category h2 {
     padding-bottom: 15px;
     border-bottom: 2px solid #0D2037;
+}
+
+/* スマホ版 アクセス情報 */
+@media screen and (max-width: 768px) {
+
+    .access-details {
+        padding: 25px 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .access-details h2 {
+        font-size: 20px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .access-details p {
+        font-size: 14px;
+        line-height: 1.8;
+        margin-bottom: 12px;
+        overflow-wrap: break-word;
+    }
+
+    .access-button {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 15px 10px;
+        font-size: 14px;
+        margin-top: 20px;
+        border-radius: 6px;
+    }
+
+    /* アクセス情報 スマホ版 */
+    .access-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .access-image {
+        width: 100%;
+    }
+
+    .access-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .access-details {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .access-button {
+        width: 55%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    /* お問い合わせ スマホ版 */
+    .contact-banner {
+        padding: 35px 15px;
+    }
+
+    .contact-banner h2 {
+        font-size: 18px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+
+    .contact-button {
+        display: inline-block;
+        font-size: 14px;
+        padding: 12px 22px;
+        border-radius: 6px;
+    }
+
+    .contact-tel-label {
+        font-size: 13px;
+        margin-top: 25px;
+    }
+
+    .contact-tel {
+        font-size: 20px;
+    }
+
+    /* サポート案内 スマホ版 */
+    .support-heading {
+        padding: 0 15px;
+    }
+
+    .support-heading p {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .support-heading h2 {
+        font-size: 19px;
+        line-height: 1.6;
+    }
+
+    .support-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 0 15px;
+    }
+
+    .support-item {
+        padding: 20px 18px;
+    }
+
+    .support-item>span:first-child {
+        font-size: 11px;
+    }
+
+    .support-item h3 {
+        font-size: 17px;
+        margin: 12px 0 8px;
+    }
+
+    .support-item p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .support-arrow {
+        font-size: 20px;
+    }
+
+    /* おすすめ車両 スマホ版 */
+    .recommend-list {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 0 15px;
+    }
+
+    .car-card {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px;
+    }
+
+    .car-image {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .car-image img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .car-card h3 {
+        font-size: 18px;
+        margin: 18px 0 10px;
+    }
+
+    .car-card p {
+        font-size: 13px;
+        line-height: 1.8;
+        margin-bottom: 8px;
+    }
+
+    .car-card .car-price {
+        font-size: 13px;
+        margin-top: 15px;
+    }
+
+    .car-card .car-price strong {
+        font-size: 22px;
+    }
+
+    .car-detail {
+        width: 85%;
+        box-sizing: border-box;
+        margin: 20px auto 5px;
+        padding: 12px 10px;
+        font-size: 13px;
+    }
+
+    .car-card .car-size-large {
+        width: 85%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .mv-image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+    }
+
+    /* INFORMATION スマホ版 */
+    .information-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* 見出し部分 */
+    .information-heading {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* イラスト */
+    .information-visual {
+        width: 100%;
+        margin: 20px auto 0;
+        text-align: center;
+    }
+
+    .information-visual img {
+        width: 45%;
+        max-width: 190px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* お知らせ一覧 */
+    .information-list {
+        width: 100%;
+    }
+
+    /* お知らせ1件ずつ */
+    .information-item {
+        padding: 18px 5px;
+        gap: 10px;
+    }
+
+    .information-item h3 {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .information-item time {
+        font-size: 12px;
+    }
+
+    /* 矢印 */
+    .information-arrow {
+        font-size: 18px;
+        flex-shrink: 0;
+    }
+
+    /* お知らせ一覧ボタン */
+    .information-more {
+        width: 100%;
+        justify-content: center;
+        padding: 16px 10px;
+        font-size: 14px;
+    }
 }
