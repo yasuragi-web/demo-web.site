@@ -784,14 +784,6 @@ a {
     padding: 15px 58px;
 }
 
-/* 車検ロゴ */
-.shaken-logo {
-    display: block;
-    width: 100px;
-    height: auto;
-    margin: 10px 0 0 auto;
-}
-
 /* 車検リンクとロゴ */
 .shaken-bottom {
     display: flex;
@@ -1229,4 +1221,14 @@ a {
 /* 2台目だけ縮小率を95%にする */
 .car-card .car-size-large {
     animation-name: sierra-wiggle;
+}
+
+/* 車検紹介部分の下の余白 */
+.shaken-content {
+    padding-bottom: 60px
+}
+
+.shaken-bottom a {
+    display: inline-block;
+    margin-top: 60px;
 }
